@@ -1,26 +1,39 @@
-# README
+# Instagram clone
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Ruby version
+* ruby version 2.5.1
 
-Things you may want to cover:
+## Configuration
+clone repo and follow the instructions to create the required database
 
-* Ruby version
+## Database creation
+```
+Using the built in sqlite3
 
-* System dependencies
+```
 
-* Configuration
+## Added Gems
+```
+gem 'bootstrap-sass', '~> 3.3.6'
+gem 'autoprefixer-rails', '~> 6.3.7'
+gem 'devise', '~> 4.2'
+gem 'capybara', '~> 2.7', '>= 2.7.1' (add this to group test)
+gem 'rspec-rails', '~> 3.4', '>= 3.4.2' (add to BOTH group and test development)
+gem 'guard', '~> 2.14.0' (add to group development)
+gem 'guard-rspec', '~> 4.7.2' (add to group development)
 
-* Database creation
+```
 
-* Database initialization
+## Required installations for gem dependencies
+```
+bundle install
 
-* How to run the test suite
+```
+## Starting the server
+```
+bin/rails server # Start the server at localhost:3000
 
-* Services (job queues, cache servers, search engines, etc.)
+```
 
-* Deployment instructions
-
-* ...
-
-'A helper file' is any file that you extract common code into and then reference the helper where the code was.
+## The Request/Response Cycle for a Rails app
+![](app/assets/images/request_response_cycle.jpg)
