@@ -22,6 +22,22 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
   end
 
+  def edit
+    @article = Article.find(params[:id])
+  end
+
+  def update
+    @article = Article.find(params[:id])
+    if @article.update(article_params)
+      flash[:success] = "Article has been updated"
+      redirect_to @article
+
+    else
+      flash.now[:danger] = "Article has not been updated"
+      render :edit
+    end
+  end
+
   protected
 
   def resource_not_found
@@ -35,4 +51,5 @@ class ArticlesController < ApplicationController
   def article_params
     params.require(:article).permit(:title, :body)
   end
+
 end
