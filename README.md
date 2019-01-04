@@ -22,3 +22,5 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+'A helper file' is any file that you extract common code into and then reference the helper where the code was.
